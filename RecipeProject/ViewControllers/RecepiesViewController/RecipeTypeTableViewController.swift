@@ -31,7 +31,7 @@ class RecipeTypeTableViewController: UIViewController    {
     }
     private func registerCells(){
         let RecipeCellIdentifier = "recipeTypeCell"
-        let cellNib = UINib(nibName: "RecipeTypeTableViewCell", bundle: nil)
+        let cellNib = UINib(nibName: "RecypeTypeTableViewCell", bundle: nil)
         RecipeTypeTable?.register(cellNib, forCellReuseIdentifier: RecipeCellIdentifier)
     }
     
@@ -43,7 +43,7 @@ extension RecipeTypeTableViewController: UITableViewDelegate,UITableViewDataSour
         return 1
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 120.0
+        return 150
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return recipes.count
@@ -53,6 +53,7 @@ extension RecipeTypeTableViewController: UITableViewDelegate,UITableViewDataSour
         
         let recipe = recipes[indexPath.row]
         cell.lblName.text = recipe.name
+        cell.lblName.layer.cornerRadius = 20
         cell.recipeImage?.sd_setImage(with: URL(string: recipe.categoryImage!), completed: nil)
         
         return cell
@@ -60,7 +61,7 @@ extension RecipeTypeTableViewController: UITableViewDelegate,UITableViewDataSour
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let myCategory = recipes[indexPath.row]
-        let recepieVC = RecipeTypeTableViewController()
+        let recepieVC = IngredientsViewController(img: myCategory.categoryImage!, name: myCategory.name!, descrip: myCategory.description!, lat: myCategory.lat!, long: myCategory.long!, difficulty: myCategory.difficult!)
         navigationController?.pushViewController(recepieVC, animated: true)
     }
 }
