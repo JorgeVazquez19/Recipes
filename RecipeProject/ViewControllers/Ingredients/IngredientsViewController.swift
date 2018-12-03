@@ -33,7 +33,10 @@ class IngredientsViewController: UIViewController {
         self.long = long
         self.difficulty = difficulty
     }
-    
+    @IBAction func loadMap(){
+        let map = MapViewController(lat: lat, long: long)
+        navigationController?.pushViewController(map, animated: true)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = name

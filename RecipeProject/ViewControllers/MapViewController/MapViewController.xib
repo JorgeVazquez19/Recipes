@@ -10,9 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="RecipeProject" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MapViewController" customModule="RecipeProject" customModuleProvider="target">
             <connections>
-                <outlet property="btnLogin" destination="zlv-4V-M4E" id="Vpp-6X-tji"/>
+                <outlet property="mapView" destination="KT0-y5-Xqd" id="0qI-zc-8tD"/>
+                <outlet property="segmentedControl" destination="Sg6-e2-bp8" id="kbI-jR-wNZ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -21,29 +22,26 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fondo" translatesAutoresizingMaskIntoConstraints="NO" id="fJb-pV-Vwb">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="445"/>
+                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="KT0-y5-Xqd">
+                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                </imageView>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zlv-4V-M4E">
-                    <rect key="frame" x="0.0" y="442" width="375" height="225"/>
+                </mapView>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Sg6-e2-bp8">
+                    <rect key="frame" x="84" y="65" width="206" height="29"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="68"/>
-                    <state key="normal" title="Login">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </state>
+                    <segments>
+                        <segment title="Estandar"/>
+                        <segment title="Satelite"/>
+                        <segment title="Hibrido"/>
+                    </segments>
                     <connections>
-                        <action selector="ActionLogin:" destination="-1" eventType="touchUpInside" id="DRY-fG-qrg"/>
+                        <action selector="segmentedControlTypeDidChange:" destination="-1" eventType="valueChanged" id="PeS-8s-mga"/>
                     </connections>
-                </button>
+                </segmentedControl>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="-384.5" y="-295.5"/>
+            <point key="canvasLocation" x="24.5" y="51.5"/>
         </view>
     </objects>
-    <resources>
-        <image name="fondo" width="3200" height="2400"/>
-    </resources>
 </document>

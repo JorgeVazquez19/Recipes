@@ -47,14 +47,14 @@ class RecipeTableViewController: UIViewController {
         recipesVegetable.append(recipe6)
         
         
-        let category1 = RecipeModel(name: "Carnes", categoryImage: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbOkK7VwdBqr-8wmhLDNYtKjjx-aemEPF3BvwnVsGbxWE9Va4WdQ", recipeNumber: 4, recipe: recipesMeat)
-        let category2 = RecipeModel(name: "Pescado", categoryImage: "https://img.taste.com.au/KFln5Pso/w506-h253-cfill/taste/2016/11/lentil-rice-with-turmeric-fish-76468-1.jpeg", recipeNumber: 4, recipe: recipesFish)
-        let category3 = RecipeModel(name: "Aves", categoryImage: "https://hips.hearstapps.com/del.h-cdn.co/assets/16/21/1600x800/landscape-1464124800-delish-grilled-chicken-sweet-chili.jpg?resize=1200:*", recipeNumber: 4, recipe: recipesBird)
-        let category4 = RecipeModel(name: "Verduras", categoryImage: "https://www.inspiredtaste.net/wp-content/uploads/2017/10/Easy-Roasted-Vegetables-4-1200.jpg", recipeNumber: 4,recipe: recipesVegetable)
-        let category5 = RecipeModel(name: "Salads", categoryImage: "https://www.tasteofhome.com/wp-content/uploads/2017/10/exps6498_MRR133247D07_30_5b_WEB-2-696x696.jpg", recipeNumber: 4,recipe: recipesVegetable)
-        let category6 = RecipeModel(name: "Pasta", categoryImage: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxqslfD-ku0Vzt-F3Jj4WvVyUQuZiPx4Y0MdfcVJFVOkJwzjxn0A", recipeNumber: 4,recipe: recipesVegetable)
-        let category7 = RecipeModel(name: "Soups", categoryImage: "https://www.bbcgoodfood.com/sites/default/files/recipe-collections/collection-image/2013/05/recipe-image-legacy-id-1074500_11.jpg", recipeNumber: 4,recipe: recipesVegetable)
-        let category8 = RecipeModel(name: "Desserts", categoryImage: "http://static.kidspot.com.au/recipe_asset/1385/img-4962.jpg-20150505010814~q75,dx720y432u1r1gg,c--.jpg", recipeNumber: 4,recipe: recipesVegetable)
+        let category1 = RecipeModel(name: "Carnes", categoryImage: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbOkK7VwdBqr-8wmhLDNYtKjjx-aemEPF3BvwnVsGbxWE9Va4WdQ", recipeNumber: 2, recipe: recipesMeat)
+        let category2 = RecipeModel(name: "Pescado", categoryImage: "https://img.taste.com.au/KFln5Pso/w506-h253-cfill/taste/2016/11/lentil-rice-with-turmeric-fish-76468-1.jpeg", recipeNumber: 1, recipe: recipesFish)
+        let category3 = RecipeModel(name: "Aves", categoryImage: "https://hips.hearstapps.com/del.h-cdn.co/assets/16/21/1600x800/landscape-1464124800-delish-grilled-chicken-sweet-chili.jpg?resize=1200:*", recipeNumber: 2, recipe: recipesBird)
+        let category4 = RecipeModel(name: "Verduras", categoryImage: "https://www.inspiredtaste.net/wp-content/uploads/2017/10/Easy-Roasted-Vegetables-4-1200.jpg", recipeNumber: 2,recipe: recipesVegetable)
+        let category5 = RecipeModel(name: "Salads", categoryImage: "https://www.tasteofhome.com/wp-content/uploads/2017/10/exps6498_MRR133247D07_30_5b_WEB-2-696x696.jpg", recipeNumber: 0,recipe: recipesVegetable)
+        let category6 = RecipeModel(name: "Pasta", categoryImage: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxqslfD-ku0Vzt-F3Jj4WvVyUQuZiPx4Y0MdfcVJFVOkJwzjxn0A", recipeNumber: 0,recipe: recipesVegetable)
+        let category7 = RecipeModel(name: "Soups", categoryImage: "https://www.bbcgoodfood.com/sites/default/files/recipe-collections/collection-image/2013/05/recipe-image-legacy-id-1074500_11.jpg", recipeNumber: 0,recipe: recipesVegetable)
+        let category8 = RecipeModel(name: "Desserts", categoryImage: "http://static.kidspot.com.au/recipe_asset/1385/img-4962.jpg-20150505010814~q75,dx720y432u1r1gg,c--.jpg", recipeNumber: 0,recipe: recipesVegetable)
         
         recipes.append(category1)
         recipes.append(category2)
@@ -102,17 +102,17 @@ class RecipeTableViewController: UIViewController {
                 switch indexPath.row{
                 case 0:
                     cell.lblCategory.text = "Carne"
-                    cell.lblNum.text = "\(4)"
+                    cell.lblNum.text = "\(2)"
                     cell.categoryImage.image = UIImage(named: "meat")
                     cell.lblDescription.text = "Los mejores platos de carne"
                 case 1:
                     cell.lblCategory.text = "Pescados"
-                    cell.lblNum.text = "\(3)"
+                    cell.lblNum.text = "\(1)"
                     cell.categoryImage.image = UIImage(named: "fish")
                     cell.lblDescription.text = "Los mejores platos de pescado"
                 case 2:
                     cell.lblCategory.text = "Aves"
-                    cell.lblNum.text = "\(4)"
+                    cell.lblNum.text = "\(1)"
                     cell.categoryImage.image = UIImage(named: "birds")
                     cell.lblDescription.text = "Los mejores platos de aves"
                 case 3:
